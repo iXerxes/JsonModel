@@ -18,7 +18,7 @@ export default class Person extends JsonModel {
     }
 
     // JsonConstructor
-    private static _TestModel(
+    private static _Person(
         @Person.jsonParam('name') name: string, // Required
         @Person.jsonParam('age') age: number,
         @Person.jsonOptParam('parent', Person) parent: Person, // Optional & Deserialize the value into a type of Person
