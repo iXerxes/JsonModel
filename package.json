@@ -1,0 +1,17 @@
+{
+  "name": "jsonmodel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-run": "build-run.sh",
+    "build": "npx tsc",
+    "run": "node ./build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.13.9",
+    "temporal-polyfill": "^0.2.5"
+  }
+}

@@ -1,11 +1,3 @@
-# JsonModel
-My own crude, simplified, and half-cooked version of C# Newtonsoft.Json. Written in Typescript using the experimental parameter decorators feature
-
----
-
-### Create a new class that extends `JsonModel`, and create a static method to serve as the JsonConstructor.
-
-```ts
 import JsonModel from "./JsonModel";
 
 export default class Person extends JsonModel {
@@ -34,12 +26,8 @@ export default class Person extends JsonModel {
     {
         return new Person(name, age, parent);
     }
+
 }
-```
-
-### Deserialize an object into a new Person.
-
-```ts
 
 const simonObj = {
     name: "Simon",
@@ -61,7 +49,7 @@ const errorObj = {
 
 
 try {
-
+    
     const simon = Person.deserializeFrom(simonObj);
     console.log(`Hello, I'm ${simon} and I'm ${simon.age} years old. My parent is ${simon.parent}.`);
     // Hello, I'm Simon and I'm 30 years old. My parent is undefined.
@@ -77,10 +65,3 @@ try {
 } catch (ex) {
     console.error((ex as Error).message);
 }
-
-```
-
----
-
-###  TODO: Add serialization
-blah blah blah blah blah blah blah blah blah blah 
